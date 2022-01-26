@@ -1,0 +1,42 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<div>
+    Home
+    <h3 class="ui primary header">Bidders</h3>
+</div>
+
+<div>
+    <button class="ui primary basic icon button"><i class="trash icon"></i></button>
+    <button class="ui blue basic button dropdown" suiDropdown>
+        <div class="text">Actiion</div>
+        <i class="dropdown icon"></i>
+        <div class="menu" suiDropdownMenu>
+            <div class="item">Download</div>
+            <div class="item">Method</div>
+        </div>
+    </button>
+    <button class="ui primary button">Add Bidder</button>
+</div>
+</div>
+
+<div class="ui vertical segment">
+    <div class="ui segment dark" fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex="5%">
+            <sui-checkbox>
+
+            </sui-checkbox>
+        </div>
+        <div fxFlex>BIDDERS ID</div>
+        <div fxFlex="25%">COMPANY NAME</div>
+        <div fxFlex>MAIN CONTACT</div>
+        <div fxFlex>EMAIL</div>
+        <div fxFlex>RC NUMBER</div>
+        <div></div>
+
+
+    </div>
+
+    <app-bidder-row
+        *ngFor="let bidder of bidders" [bidder]="bidder"
+    
+    ></app-bidder-row>
+</div>

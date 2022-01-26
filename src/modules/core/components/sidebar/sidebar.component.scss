@@ -1,0 +1,29 @@
+#sidebar {
+    height:100%;
+    background: #3f4395 !important;
+    color:#fff;
+    padding-top:40px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.item .header {
+    color:#fff;
+    cursor:pointer;
+}
+
+.ui.secondary.vertical.pointing.menu .active.item  {
+    color: #4bbeff !important;
+    border-color: #4bbeff;
+    border-right-width: 5px;
+}
+
+.ui.secondary.vertical.pointing.menu .active.item >.header {
+    color: #4bbeff !important;
+}
+
+
+
+#marginB {
+    margin-bottom:8px;
+}

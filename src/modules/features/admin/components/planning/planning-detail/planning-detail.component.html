@@ -1,0 +1,46 @@
+<div class="ui container" fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutGap="20px" (click)="goBack()" style="cursor:pointer;">
+           
+            <div>
+                <i class="arrow left primary icon"></i>
+           </div> 
+           <div>
+               <label class="ui grey">Home</label>
+                <h2 class="ui primary header">Purchase of Office Supplies</h2>
+            </div>
+        </div>
+        
+        <div fxLayout="row" fxLayoutGap="15px">
+            <button class="ui small basic primary button dropdown" suiDropdown>
+                <div class="text">Update</div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                    <div class="item">Update Appropriation</div>
+                    <div class="item">Update Selection Method</div>
+                    <div class="item">Update Procurement Type</div>
+                </div>
+            </button>
+            <button class="ui  primary button"><i class="trash icon"></i></button>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    
+    <div fxLayout="row" fxLayoutGap="30px">
+        <div fxFlex="20%" >
+            <div fxLayout="column" fxLayoutGap="10px" class="side-panel">
+                
+                   <a  *ngFor="let link of project_field" class="ui  button" routerLink="/admin/planning/detail/{{link?.route}}" routerLinkActive="primary">{{link?.name}}</a>
+         
+            </div>
+        </div>
+        
+
+        <div fxFlex="grow">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+
+</div>

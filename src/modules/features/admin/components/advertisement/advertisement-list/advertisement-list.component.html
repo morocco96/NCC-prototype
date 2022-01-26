@@ -1,0 +1,50 @@
+<div class="ui container" fxLayout="column">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+
+        <div>
+            <h2 class="ui primary header">Advertisement</h2>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="15px">
+            <button class='ui small basic button'>Detele</button>
+            <button class="ui small button primary">New Advert</button>
+        </div>
+
+
+    </div>
+    <div class="ui divider"></div>
+    
+    <div class="ui segment">
+        <sui-search placeholder="Example Search..."
+            [hasIcon]="hasIcon"
+            [searchDelay]="0"
+            (resultSelected)="alertSelected()"></sui-search>
+    </div>
+
+    <div class="ui vertical basic segment">
+        <div fxLayout="row" class="ui dark segment" fxLayoutAlign="start center" fxLayoutGap="10px" >
+            <div fxFlex="5%">
+                <sui-checkbox>
+
+                </sui-checkbox>
+                </div>
+                <div fxFlex>ADVERT ID</div>
+                <div fxFlex="25%">ADVERT TITLE</div>
+                <div fxFlex>LOTS</div>
+                <div fxFlex class="right-aligned">DATE CREATED</div>
+                <div fxFlex class="right-aligned">STATUS</div>
+                <div fxFlex></div>
+        </div>
+
+        <app-advertisement-row
+            *ngFor="let advert of advertisements"
+            [advert]="advert"
+        ></app-advertisement-row>
+    </div>
+
+
+
+
+
+</div>

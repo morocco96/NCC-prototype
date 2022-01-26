@@ -1,0 +1,14 @@
+<h3 class="title">Awarded Projects</h3>
+<hr>
+
+<div class="ui vertical basic segment">
+<ng-template ngFor let-award [ngForOf]="awards">
+    <div fxLayout="column" id="marginB">
+        <h3 class="font">{{award?.name}}</h3>
+       <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="sub-value">Lot ID &nbsp; &nbsp;<label class="ui circular tiny sub-label label">{{award?.lotID}}</label> &nbsp; &nbsp;Amount &nbsp; &nbsp;<label class="ui circular sub-label tiny label">{{award?.amount}}</label></div>
+        <button class="ui primary tiny button">View</button>
+       </div>
+    </div>
+</ng-template>
+</div>

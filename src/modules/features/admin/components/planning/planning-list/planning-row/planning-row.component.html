@@ -1,0 +1,13 @@
+<div class="ui segment" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center" id="marginB">
+    <div fxFlex="5%">
+        <sui-checkbox></sui-checkbox>
+    </div>
+    <div fxFlex>{{planning?.id}}</div>
+    <div fxFlex="25%" appHighlight>{{planning?.name}}</div>
+    <div fxFlex>{{planning?.type}}</div>
+    <div fxFlex>{{planning?.amount}}</div>
+    <div fxFlex>{{planning?.date}}</div>
+    <div fxFlex appHighlight>{{planning?.department}}</div>
+    <div fxFlex><div class="ui label tiny green">{{planning?.status}}</div></div>
+    <div fxFlex ><a class="ui circular icon tiny button right-aligned " routerLink="/admin/planning/detail" routerLinkActive="active"><i class="eye icon"></i></a></div>
+</div>

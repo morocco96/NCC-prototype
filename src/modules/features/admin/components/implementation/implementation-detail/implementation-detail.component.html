@@ -1,0 +1,42 @@
+<div class="ui container">
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutGap="10px">
+        <div>
+            <i class="arrow left icon"></i>
+        </div>
+        <div>
+            <label class="ui grey">Advertisement</label>
+            <h2 class="ui primary header">Building Project Block width 40 Rooms and IT </h2>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="15px">
+        <button class="ui small blue basic button" suiPopup [popupInverted]="true" popupPlaceholder="bottom" popupText="Remove Project">Delete</button>
+        <button class="ui  blue button dropdown" suiDropdown>
+            <div class="text">Update</div>
+            <i class="dropdown icon"></i>
+            <div class="menu" suiDropdownMenu>
+                <div class="item">Retry Method</div>
+                <div class="item">Upload Document</div>
+            </div>
+        </button>
+    </div>
+</div>
+<div class="ui divider"></div>
+
+<div fxLayout="row" fxLayoutGap="30px">
+    <div fxFlex="20%">
+        <div  fxLayout="column" fxLayoutGap="10px" class="side-panel">
+
+             <a *ngFor="let link of implementation" class="ui button" routerLink="/admin/implementation/detail/{{link?.route}}" routerLinkActive="primary">{{link?.name}}</a>
+   
+        </div>
+    </div>
+
+    <div fxFlex="grow">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+
+</div>

@@ -1,0 +1,78 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<div fxLayout="row" fxLayoutGap="20px">
+    <div > <i class=" arrow left icon"></i></div>
+<div>
+    <label>Award</label>
+    <h2 class="ui primary header">Building a training portal for NCC</h2>
+</div>
+</div>
+
+<div>
+    <button class="ui primary basic button">Delete</button>
+    <button class="ui primary button">Edit</button>
+</div>
+
+</div>
+<div class='ui divider'></div>
+
+<div class="ui padded board segment" fxLayout="row" fxLayoutAlign='space-between'>
+    <div fxFlex="30%" fxLayout="row">
+        <div >
+            <div><img src="/assets/images/logo.svg" alt="">&nbsp; &nbsp; &nbsp;</div>
+        </div>
+        <div>
+            <div>Encentral Solutions Limited</div>
+            <div class="ui blue label">873663</div>
+        </div>
+    </div>
+
+   <div fxFlex="grow" fxLayout="column" fxLayoutGap="30px">
+    <div  fxLayout="row" fxLayoutGap="10%" >
+        <div>
+            <div> MAIN CONTACT</div>
+           <label>Farouq Alogba</label>
+        </div>
+        <div>
+            <div> PROJECT YEAR</div>
+           <label>2021</label>
+        </div>
+        <div>
+            <div>EMAIL</div>
+           <label>lagbaja.owonikoko@encentral.com.ng</label>
+        </div>
+
+    </div>
+
+    <div  fxLayout="row" fxLayoutGap="10%" >
+        <div>
+            <div> PHONE NUMBER</div>
+           <label>0801 635 4479</label>
+        </div>
+        <div>
+            <div> DATE</div>
+           <label>15 Oct 2021</label>
+        </div>
+        <div>
+            <div> ADDRESS</div>
+           <label>4140 Parker Rd. Allentown, New Mexico 31134</label>
+        </div>
+
+    </div>
+   </div>
+</div>
+
+
+<div fxLayout="row" fxLayoutGap="30px">
+    <div fxFlex="20%"  >
+        <div fxLayout="column" fxLayoutGap="10px" class="side-panel">
+
+            <a class="ui button" *ngFor="let link of award_field" routerLink="/admin/award/detail/{{link.route}}" routerLinkActive="primary">{{link.name}}</a>
+    
+        </div>
+     </div>
+    <div fxFlex="grow">
+    <router-outlet></router-outlet>
+
+    </div>
+</div>
+

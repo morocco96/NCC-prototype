@@ -1,0 +1,16 @@
+<div class="ui basic  vertical segment">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <h3>Document</h3>
+        <button class="ui icon button"><i class="plus icon"></i></button>
+    </div>
+    <hr>
+    <ng-template ngFor let-document [ngForOf]="documents">
+        <h3>{{document?.name}}</h3>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div>Date Created <label class="ui circular label">{{document?.dateCreated}}</label> &nbsp; &nbsp; &nbsp; &nbsp; Created By <label class="ui circular label">{{document?.createdBy}}</label> </div>
+            <div><button class="ui tiny primary button">View</button>
+                <button class="ui icon circular button">:</button>
+            </div>
+        </div>
+    </ng-template>
+</div>

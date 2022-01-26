@@ -1,0 +1,53 @@
+<div clas="ui container" fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div>
+        <h2 class="ui primary header">Advertisements</h2>
+    </div>
+    
+    <div fxLayout="row" fxLayoutGap="15px">
+        <button class="ui basic button primary"><i class="trash icon"></i></button>
+        <button class="ui basic primary button left dropdown" suiDropdown>
+            <div class="text">Actions</div>
+            <i class="dropdown icon"></i>
+            <div class="menu" suiDropdownMenu>
+                <div class="item">Update Application</div>
+                <div class="item">Update Selection Method</div>
+                <div class="item">Update Procurement Method</div>
+            </div>
+        </button>
+        <button class="ui primary basic button">New Lot Award</button> 
+    </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui segment">
+        <sui-search placeholder="Example Search..."
+            [hasIcon]="hasIcon"
+            [searchDelay]="0"
+            (resultSelected)="alertSelected()"></sui-search>
+    </div>
+
+    <div class="ui vertical basic segment">
+        <div class="ui dark segment" fxLayout="row" fxLayoutAlign="space-between stretch">
+            <div fxFlex="5%">
+                <sui-checkbox>
+                </sui-checkbox>
+            </div>
+            <div fxFlex>LOT ID</div>
+            <div fxFlex="25%">LOT NAME</div>
+            <div fxFlex>PROJECT ID</div>
+            <div fxFlex>CREATED BY</div>
+            <div fxFlex>AWARD DATE</div>
+            <div fxFlex>AMOUNT</div>
+            <div></div>
+        </div>
+
+        <app-award-row
+        *ngFor="let award of awards" [award]="award"
+        ></app-award-row>
+    </div>
+    
+    
+    
+    
+    </div>
+    

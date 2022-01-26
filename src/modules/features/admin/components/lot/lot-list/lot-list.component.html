@@ -1,0 +1,47 @@
+<div class="ui container" fxLayout="column">
+<div fxLayout="row" fxLayoutAlign="spac-between center">
+    <div fxFlex="grow">
+        <h2 class="ui primary header">Lot</h2>
+    </div>
+
+    <div fxFlex="35%">
+        <button class="ui basic blue primary button"><i class="trash icon"></i></button>
+        <div class="ui primary basic dropdown button" suiDropdown>
+            <div class="text">Update</div>
+            <i class="dropdown icon"></i>
+        <div class="menu" suiDropdownMenu>
+            <div class="item">Update Appropriation</div>
+            <div class="item">Update Selection Method</div>
+            <div class="item">Update Procurement Type</div>
+        </div>
+
+        </div>
+
+        <button class="ui primary button">New Lot</button>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div class="ui vertical basic segment">
+    <div class="ui segment dark" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+        <div fxFlex="5%">
+            <sui-checkbox>
+
+            </sui-checkbox>
+        </div>
+        <div fxFlex>LOT ID</div>
+        <div fxFlex="25%">LOT NAME</div>
+        <div fxFlex>TYPE</div>
+        <div fxFlex>AMOUNT</div>
+        <div fxFlex>DATE</div>
+        <div fxFlex>DEPARTMENT</div>
+        <div fxFlex>STATUS</div>
+        <div></div>
+    </div>
+</div>
+
+<app-lot-row
+*ngFor="let lot of lots" [lot]="lot"
+></app-lot-row>
+</div>

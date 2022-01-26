@@ -1,0 +1,24 @@
+<h3>Bids</h3>
+<hr>
+
+<div class="ui vertical basic segment">
+<ng-template ngFor let-bid [ngForOf]="bids">
+    <div fxLayout="column" id="marginB">
+    <div fxLayout="row" >
+        <sui-checkbox></sui-checkbox>
+        <label class="ui blue label">{{bid?.id}}</label> &nbsp; &nbsp; &nbsp; &nbsp;
+       <div class="sub-title"><strong>{{bid?.name}}</strong></div>
+    </div>
+
+    <div fxLayout="row"  >
+        <div fxFlex="1%"></div>
+        <div fxFlex="50%" class="small-value"><i class="location icon"></i>{{bid?.address}}</div> &nbsp; &nbsp; &nbsp; &nbsp;
+        <div fxFlex="30%" class="small-value"><i class="alternate phone icon"></i>{{bid?.phone}}</div>
+        <div fxFlex="20%"><button class="ui btn small button right-aligned">Go to Tender</button></div>
+    </div>
+
+    <div class="small-value"> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; IRR Status  &nbsp;<label class="ui circular sub-label label">{{bid?.rrr}}</label> &nbsp; &nbsp; &nbsp; BPP Verified <label class="ui circular sub-label label">{{bid?.bpp}}</label> &nbsp; &nbsp; &nbsp; Proposed Ammount <label class="ui circular sub-label label">{{bid?.amount}}</label></div>
+    </div>
+
+</ng-template>
+</div>

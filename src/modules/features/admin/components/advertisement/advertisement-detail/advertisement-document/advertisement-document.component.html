@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<h3 class="title">Documents</h3>
+<button class="ui icon small-icon tiny button">
+    <i class="plus icon"></i>
+</button>
+</div>
+<hr>
+
+<div class="ui vertical basic segment">
+    <ng-template ngFor let-advert [ngForOf]="adverts">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex="grow">
+                <h4 class="sub-value">{{advert?.name}}</h4>
+                <div class="sub-label">Date Created <label class="ui circular small-label label">{{advert?.dateCreated}}</label> &nbsp; &nbsp; &nbsp; &nbsp; Created By <label class="ui circular small-label label">{{advert?.createdBy}}</label></div>
+            </div>
+
+            <div><button class="ui primary dark tiny button">View</button></div>
+            <div><button class="ui circular btn icon button dropdown" suiDropdown>
+                <i class="ellipsis vertical icon"></i>
+                <div class="menu left" suiDropdownMenu>
+                    <div class="item">Send as Email</div>
+                    <div class="item">Delete Document</div>
+                    <div class="item">Download as PDF</div>
+                    <div class="item">Download as MSWord</div>
+                </div>
+            </button></div>
+       
+        </div>
+        <div class="ui divider"></div>
+
+    </ng-template>
+</div>

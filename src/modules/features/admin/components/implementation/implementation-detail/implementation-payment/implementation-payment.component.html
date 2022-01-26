@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+<h3 class="title">Payment</h3>
+<button class="ui icon small-icon tiny button">
+    <i class="plus icon"></i>
+</button>
+</div>
+<hr>
+
+<div class="ui vertical basic segment">
+    <ng-template ngFor let-advert [ngForOf]="payment">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex="grow">
+               <div fxLayout="row" fxLayoutAlign="space-between center">
+                <h4 class="sub-value">{{advert?.name}}</h4>
+                <div class="sub-label">Paid on &nbsp; &nbsp;<label class="ui circular small-label dark label"> {{advert?.paid}}</label></div>
+               </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="sub-label">Date Created <label class="ui circular small-label label">{{advert?.dateCreated}}</label> &nbsp; &nbsp; &nbsp; &nbsp; Created By <label class="ui circular small-label label">{{advert?.createdBy}}</label></div>
+                    <div class="sub-label">Amount  &nbsp; &nbsp;<label class="ui circular dark small-label label"> {{advert?.amount}}</label></div>
+                </div>
+            </div>
+
+          
+       
+        </div>
+        <div class="ui divider"></div>
+
+    </ng-template>
+</div>

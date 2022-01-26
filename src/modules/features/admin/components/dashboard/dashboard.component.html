@@ -1,0 +1,72 @@
+<div classs="ui primary header">Home</div>
+<div class="ui divider"></div>
+
+<div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between stretch">
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="dark">
+    <div>BIDS RECIEVED</div>
+    <h2>1427</h2>
+</div>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="dark">
+    <div>PROJECTS ALLOCATED</div>
+    <h2>203</h2>
+</div>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="dark">
+    <div>AWARDED PROJECTS</div>
+    <h2>184</h2>
+</div>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="dark">
+    <div>ONGOING PROJECTS</div>
+    <h2>48</h2>
+</div>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="light">
+    <div>BUDGET ALLOCATED</div>
+    <h2>1,853M</h2>
+</div>
+
+<div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="card" id="light">
+    <div>AMOUNT SPENT</div>
+    <h2>1,744M</h2>
+</div>
+</div>
+
+<div class="ui primary header">
+    Awarded Projects
+</div>
+
+<div class="ui  segment" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center" id="dark">
+    <div fxFlex="5%">
+        <sui-checkbox>
+
+        </sui-checkbox>
+    </div>
+    <div fxFlex>LOT ID</div>
+    <div fxFlex="25%">LOT NAME</div>
+    <div fxFlex>PROJECT ID</div>
+    <div fxFlex>CREATED BY</div>
+    <div fxFlex>DATE CREATED</div>
+    <div fxFlex>AMOUNT</div>
+    <div fxFlex></div>
+</div>
+
+<div *ngFor="let project of projectAwards" class="ui segment" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+    <div fxFlex="5%">
+        <sui-checkbox>
+
+        </sui-checkbox>
+    </div>
+    <div fxFlex>{{project?.id}}</div>
+    <div fxFlex="25%">{{project?.name}}</div>
+    <div fxFlex>{{project?.projectID}}</div>
+    <div fxFlex>{{project?.createdBy}}</div>
+    <div fxFlex>{{project?.dateCreated}}</div>
+    <div fxFlex>{{project?.amount}}</div>
+    <div fxFlex> <button class="ui circular icon tiny button right-aligned"><i class="eye icon"></i></button></div>
+</div>
+
+<div class="text-aligned">
+    <button class="ui primary button">See All Projects</button>
+</div>

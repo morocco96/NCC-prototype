@@ -1,0 +1,16 @@
+<div class="ui segment" fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="star center" id="marginB">
+    <div fxFlex="5%">
+        <sui-checkbox>
+
+        </sui-checkbox>
+    </div>
+    <div fxFlex>{{award?.id}}</div>
+    <div fxFlex="25%">{{award?.name}}</div>
+    <div fxFlex>{{award?.projectId}}</div>
+    <div fxFlex>{{award?.createdBy}}</div>
+    <div fxFlex>{{award?.date}}</div>
+    <div fxFlex>{{award?.amount}}</div>
+    <div class="right-aligned">
+        <a  routerLink="/admin/award/detail" class="ui circular icon button"><i class="eye icon"></i></a>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="ui container" fxLayout="column">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+
+        <div>
+            Home
+            <h2 class="ui primary header">Implementation</h2>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="15px">
+            <button class='ui small basic primary button'><i class="trash icon"></i></button>
+            <buton class="ui basic blue button dropdown" suiDropdown>
+                <div class="text">Actions</div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                    <div class="item">Update Status</div>
+                    <div class="item">Download Document</div>
+                </div>
+            </buton>
+            <button class="ui small button primary">New Implementation</button>
+        </div>
+
+
+    </div>
+    <div class="ui divider"></div>
+    
+    <div class="ui mini filter segment">
+        <sui-search placeholder="Example Search..."
+            [hasIcon]="hasIcon"
+            [searchDelay]="0"
+            (resultSelected)="alertSelected()"></sui-search>
+    </div>
+
+    <div class="ui vertical basic segment">
+        <div fxLayout="row" class="ui dark segment" fxLayoutAlign="start center" fxLayoutGap="10px" >
+            <div fxFlex="5%">
+                <sui-checkbox>
+
+                </sui-checkbox>
+                </div>
+                <div fxFlex>LOT ID</div>
+                <div fxFlex="25%">LOT NAME</div>
+                <div fxFlex>TYPE</div>
+                <div fxFlex class="right-aligned">CONTRACTOR</div>
+                <div fxFlex class="right-aligned">STATUS</div>
+                <div fxFlex></div>
+        </div>
+
+        <app-implementation-row
+            *ngFor="let implement of implementation"
+            [advert]="implement"
+        ></app-implementation-row>
+    </div>
+
+
+
+
+
+</div>

@@ -1,0 +1,54 @@
+<div class="ui container" fxLayout="column">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+       <div fxFlex="grow" >
+        <h2 class="ui primary header">Project</h2>
+       </div>
+       
+        <div fxFlex="35%">
+            <button (click)="deleteModal()" class="ui basic blue primary button"><i class="trash icon"></i></button>
+            <div class="ui primary basic dropdown button" suiDropdown  >
+                <div class="text">Dropdown</div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                    <div class="item">Update Appropriattion</div>
+                    <div class="item">Update Selection Method</div>
+                    <div class="item">Update Procurement Type</div>
+                   
+            </div>
+        </div>
+        
+        <button  class="ui primary button">New Project</button>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div class="ui vertical basic segment">
+    <div class="ui segment dark" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start center">
+        <div fxFlex="5%">
+            <sui-checkbox>
+
+            </sui-checkbox> 
+        </div>
+            <div fxFlex >PROJECT ID</div>
+            <div fxFlex="25%">PROJECT NAME</div>
+            <div fxFlex>TYPE</div>
+            <div fxFlex>AMOUNT</div>
+            <div fxFlex>DATE</div>
+            <div fxFlex>DEPARTMENT</div>
+            <div fxFlex>STATUS</div>
+            <div></div>
+       
+    </div>
+
+
+    <app-planning-row
+[planning]="s"
+*ngFor="let s of planning"
+(onView)="viewPlanning()"
+></app-planning-row>
+</div>
+
+
+
+</div>

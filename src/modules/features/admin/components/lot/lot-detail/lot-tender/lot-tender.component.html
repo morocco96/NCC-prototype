@@ -1,0 +1,19 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Document</h3>
+    <button class="ui tiny button"><i class="plus icon"></i></button>
+</div>
+<hr>
+<div class="ui vertical basic segment">
+    <ng-template ngFor let-lot [ngForOf]="lot_tender">
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="10px">
+        <div fxFlex>
+            <h3 class="ui primary header">{{lot?.name}}</h3>
+        </div>
+        <div fxFlex  fxLayout='row'>
+            <div fxFlex="grow"> Bidders<label class="ui label gray circular">{{lot?.bidders}}</label> &nbsp; &nbsp; &nbsp; &nbsp; Created On <label class="ui label gray circular">{{lot?.createdOn}}</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Created By <label class="ui label circular gray">{{lot?.createdBy}}</label></div>
+            <div fxFlex="20%"><button class="ui primary tiny button right-aligned">View</button></div>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    </ng-template>
+</div>

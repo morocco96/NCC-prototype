@@ -1,0 +1,35 @@
+<div class="ui container">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutGap="20px" (click)="goBack()" class="pointer">
+            <div><i class="arrow left icon primary" ></i></div>
+           <div> 
+              <label class="ui grey">Bidders</label>
+            <h3 class="ui primary header">Rocad Construction Limited</h3></div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px">
+            <button class="ui primary basic button">Delete</button>
+            <button class="ui primary button dropdown" suiDropdown>
+                <div class="text">Actions</div>
+                <i class="dropdown icon"></i>
+                <div class="menu" suiDropdownMenu>
+                    <div class="item">Retry Verification</div>
+                    <div class="item">Download Documents</div>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    
+    <div fxLayout="row" fxLayoutGap="30px">
+        <div fxFlex="20%" >
+            <div class="side-panel" fxLayout="column" fxLayoutGap="10px">
+                    <a *ngFor="let link of bidders_field" class="ui button" routerLink="/admin/bidders/detail/{{link?.route}}" routerLinkActive="active">{{link?.name}}</a>
+        
+            </div>
+        </div>
+
+        <div fxFlex="grow">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

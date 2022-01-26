@@ -1,0 +1,16 @@
+<div class="ui segment" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="10px" id="marginB">
+    <div fxFlex="5%">
+        <sui-checkbox>
+
+        </sui-checkbox>
+    </div>
+    <div fxFlex>{{advert?.id}}</div>
+    <div fxFlex="25%">{{advert?.name}}</div>
+    <div fxFlex>{{advert?.type}}</div>
+    <div fxFlex>{{advert?.contractor}}</div>
+    <div fxFlex class="right-aligned"><label  [ngClass]="advert.status === 'ONGOING'? 'orange': 
+        advert.status === 'Completed'? 'green': 'red'">{{advert?.status}}</label></div>
+    <div fxFlex class="right-aligned">
+        <a class="ui circular icon tiny button" routerLink="/admin/implementation/detail"><i class="eye icon"></i></a>
+    </div>
+</div>

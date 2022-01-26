@@ -1,0 +1,15 @@
+<div class="ui segment" fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center" id=marginB>
+<div fxFlex="5%">
+    <sui-checkbox>
+
+    </sui-checkbox>
+</div>
+<div fxFlex>{{lot?.id }}</div>
+<div fxFlex="25%">{{lot?.name}}</div>
+<div fxFlex>{{lot?.type}}</div>
+<div fxFlex>{{lot?.amount}}</div>
+<div fxFlex>{{lot?.date}}</div>
+<div fxFlex>{{lot?.department}}</div>
+<div fxFlex><label class="ui label tiny green">{{lot?.status}}</label></div>
+<div fxFlex> <a class="ui circular icon tiny button right-aligned" routerLink="/admin/lot/detail" routerLinkActive="active"><i class="eye icon"></i></a></div>
+</div>
